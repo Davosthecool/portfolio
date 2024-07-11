@@ -1,0 +1,18 @@
+---
+layout: base
+---
+<head>
+  <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+</head>
+
+{% include header.html %}
+
+<body>
+  {{ content }}
+</body>
+
+{% include footer.html %}
+
+</html>
