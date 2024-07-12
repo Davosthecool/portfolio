@@ -1,13 +1,32 @@
+<style>
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+</style>
 <footer>
     <div class="container">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
       <p>
-        Created by <a href="mailto:{{ site.email }}">{{ site.author }}</a>.
+        Created by {{ site.author }} using <a href="https://jekyllrb.com">Jekyll</a> and hosted on <a href="https://pages.github.com">GitHub Pages</a>.
       </p>
       <p>
-        Follow me on 
-        <a href="https://github.com/{{ site.social.github }}">GitHub</a>,
-        <a href="https://linkedin.com/in/{{ site.social.linkedin }}">LinkedIn</a>.
+        Source code available on <a href="https://github.com/Davosthecool/portfolio">GitHub</a>
+      </p>
+      <p>
+        All icons used are from : <a href="https://icones8.fr">icones8.fr</a>
       </p>
     </div>
 </footer>

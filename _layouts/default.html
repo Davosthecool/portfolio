@@ -2,17 +2,24 @@
 layout: base
 ---
 <head>
-  <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
-  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/default.css' | relative_url }}">
+  {% if page.css %}
+	<link rel="stylesheet" href="{{ page.css| prepend: 'assets/css/'| relative_url }}">
+  {% endif %}
 </head>
 
-{% include header.html %}
-
 <body>
-  {{ content }}
-</body>
 
-{% include footer.html %}
+	<div class="content">
+		
+		{{ content }}
+
+		{% include home_button.html %}
+
+	</div>
+	
+
+	{% include footer.html %}
+</body>
 
 </html>
