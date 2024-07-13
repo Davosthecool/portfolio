@@ -4,12 +4,11 @@ title: Welcome
 css: welcome.css
 ---
 
-<h1>Welcome !</h1>
+<h1>{{ site.data[site.lang].welcome.title }}</h1>
 
 <p>
-    This site is the portfolio of, me, David CHOCHO. <br>
-    I'm actually in the higher education and i make this site for reference all the differents projects i made
-    and all the usefull informations about me that somebodies would know.
+    {{ site.data[site.lang].welcome.paragraph.part1 }}<br>
+    {{ site.data[site.lang].welcome.paragraph.part2 }}
     <br><br>
-    You can back home using the home button in the bottom right and navigate between the differents pages.
+    {{ site.data[site.lang].welcome.paragraph.part3 }}
 </p>
