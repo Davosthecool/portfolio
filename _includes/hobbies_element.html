@@ -1,0 +1,52 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
+.zoom-container {
+  min-width: 100vw;
+  height: 300px;  
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 0.5s ease;
+}
+
+.zoom-image {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+.zoom-image p {
+  font-family: 'Afacad', sans-serif;
+  font-weight: bolder;
+  font-size: 10vw;
+}
+
+.zoom-container:hover .zoom-image {
+  transform: scale(1.1);
+}
+
+.hidden-text {
+  padding: 10px;
+  box-sizing: border-box;
+  transition: bottom 0.5s ease;
+}
+</style>
+
+<div class="zoom-container">
+  <div class="zoom-image" style="background-image: url({{ include.image | prepend: 'assets/images/' | relative_url}});">
+    <p>{{include.title}}</p>
+  </div>
+  <div class="hidden-text">
+    {{include.body}}
+  </div>
+</div>
+

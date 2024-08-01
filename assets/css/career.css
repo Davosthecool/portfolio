@@ -10,14 +10,13 @@
 
 body {
   --color: rgba(30, 30, 30);
-  --bgColor: rgba(245, 245, 245);
+  --bgColor: rgba(227, 227, 227);
   min-height: 100vh;
   display: grid;
   align-content: center;
   gap: 2rem;
   font-family: "Poppins", sans-serif;
   color: var(--color);
-  background: var(--bgColor);
 }
 
 h1 {
